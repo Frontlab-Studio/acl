@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACL Metalúrgica | Engenharia e Serralheria de Precisão</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+
+    <head>
+
+    <body>
+
+        <nav class="navbar">
+            <div class="container nav-flex">
+                <div class="logo">
+                    <i class="fas fa-layer-group"></i> ACL <span>METALÚRGICA</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#configurador">Configurador</a></li>
+                    <li><a href="https://wa.me/+554396815048?text=Ol%C3%A1%2C%20acessei%20o%20site%20da%20ACL%20Metal%C3%A9rgica%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." data-track="true" data-coluna="click_whats_site" target="_blank" class="btn btn-primary btn-glow">Orçamento</a></li>
+                </ul>
+                <div class="mob-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content reveal fade-up">
+                <span class="hero-tag"><i class="fas fa-certificate"></i> Padrão Industrial Premium</span>
+                <h1>Transformamos Aço em<br> <span class="blue-span">Soluções de Engenharia.</span></h1>
+                <p>Serralheria de alta precisão e estruturas metálicas complexas para projetos que exigem excelência
+                    absoluta.</p>
+                <div class="btn-group">
+                    <a href="#configurador" class="btn btn-primary">Iniciar Configuração</a>
+                    <a href="#expertise" class="btn btn-outline">Nossa Expertise</a>
+                    <a href="https://wa.me/554396536582?text=Ol%C3%A1%2C%20acessei%20o%20site%20da%20ACL%20Metal%C3%A9rgica%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." data-track="true" data-coluna="click_whats_site" target="_blank" class="btn btn-outline">Orçamento Rápido</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="section-padding bg-dark-2">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <h2>O Pilar da <span class="blue-span">Qualidade ACL</span></h2>
+                    <p>Não apenas soldamos. Nós projetamos e executamos com rigor técnico.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="tech-card reveal fade-up delay-1">
+                        <div class="icon-box"><i class="fas fa-robot"></i></div>
+                        <h3>Corte & Dobra CNC</h3>
+                        <p>Precisão milimétrica com maquinário de última geração para peças complexas.</p>
+                    </div>
+                    <div class="tech-card reveal fade-up delay-2">
+                        <div class="icon-box"><i class="fas fa-atom"></i></div>
+                        <h3>Solda TIG/MIG Avançada</h3>
+                        <p>Acabamento sanitário e estrutural com penetração perfeita e estética limpa.</p>
+                    </div>
+                    <div class="tech-card reveal fade-up delay-3">
+                        <div class="icon-box"><i class="fas fa-drafting-compass"></i></div>
+                        <h3>Projetos Sob Medida</h3>
+                        <p>Desenvolvimento técnico desde a planta baixa até a instalação final.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="configurador" class="section-padding">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="blue-span">FERRAMENTA EXCLUSIVA</span>
+                    <h2>Configure seu Projeto</h2>
+                    <p>Selecione o tipo de estrutura e receba uma estimativa técnica preliminar.</p>
+                </div>
+
+                <div class="configurator-box reveal fade-up delay-1">
+                    <div class="progress-bar">
+                        <div class="step active" data-step="1">1. Tipo</div>
+                        <div class="step" data-step="2">2. Medidas</div>
+                        <div class="step" data-step="3">3. Resultado</div>
+                    </div>
+
+                    <div class="config-step active-step" id="step1">
+                        <h3>Selecione o tipo de estrutura:</h3>
+                        <div class="selection-grid grid-3">
+                            <div class="select-card" onclick="selectType('grade', this)">
+                                <i class="fas fa-th"></i>
+                                <h4>Grades/Guarda-corpo</h4>
+                            </div>
+                            <div class="select-card" onclick="selectType('portao', this)">
+                                <i class="fas fa-door-closed"></i>
+                                <h4>Portões Pesados</h4>
+                            </div>
+                            <div class="select-card" onclick="selectType('estrutura', this)">
+                                <i class="fas fa-warehouse"></i>
+                                <h4>Estrutura/Galpão</h4>
+                            </div>
+                        </div>
+                        <div class="step-actions align-right">
+                            <button class="btn btn-primary" onclick="nextStep(2)" id="btnStep1" disabled>Avançar <i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="config-step hidden-step" id="step2">
+                        <h3>Informe as dimensões aproximadas:</h3>
+                        <div class="input-grid grid-2">
+                            <div class="input-group">
+                                <label><i class="fas fa-ruler-horizontal"></i> Largura Total (metros)</label>
+                                <input type="number" id="widthInput" placeholder="Ex: 10.5" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label><i class="fas fa-ruler-vertical"></i> Altura Média (metros)</label>
+                                <input type="number" id="heightInput" placeholder="Ex: 2.8" step="0.1">
+                            </div>
+                        </div>
+                        <div class="step-actions space-between">
+                            <button class="btn btn-outline" onclick="prevStep(1)"><i class="fas fa-arrow-left"></i>
+                                Voltar</button>
+                            <button class="btn btn-primary" onclick="calculateFinal()">Calcular Estimativa <i
+                                    class="fas fa-calculator"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="config-step hidden-step" id="step3">
+                        <div class="result-content">
+                            <i class="fas fa-check-circle success-icon"></i>
+                            <h3>Estimativa Técnica Preliminar</h3>
+                            <div class="price-display">
+                                <span class="currency">R$</span>
+                                <span id="finalPriceDisplay">0.000,00</span>
+                            </div>
+                            <p class="disclaimer">*Este valor é uma base de referência para aço carbono padrão. Fatores
+                                como
+                                complexidade de instalação, tipo de pintura e material específico requerem visita
+                                técnica.
+                            </p>
+                            <a href=" https://wa.me/+554396536582?text=Ol%C3%A1%2C%20fiz%20uma%20simula%C3%A7%C3%A3o%20no%20site%20e%20gostaria%20de%20validar%20o%20projeto%20t%C3%A9cnico."
+                                target="_blank" data-track="true" data-coluna="click_whats_site" class="btn btn-whatsapp btn-glow">
+                                <i class="fab fa-whatsapp"></i> Validar com Engenheiro
+                            </a>
+                        </div>
+                        <div class="step-actions align-center">
+                            <button class="btn btn-link-tech" onclick="resetConfigurator()">Reiniciar Simulação</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer id="contato">
+            <div class="container footer-grid grid-3">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-layer-group"></i> ACL <span>METALÚRGICA</span>
+                    </div>
+                    <p>Engenharia e precisão em aço para demandas industriais e arquitetônicas de alto padrão.</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contato Técnico</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Josuilson Pacola - Rolândia, PR, 86600-000, Brasil</li>
+                        <li><i class="fab fa-whatsapp"></i> +55 (43) 9653-6582</li>
+                        <li><i class="fas fa-envelope"></i>Alexandrenaty1@gmai.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy-bar">
+                <div class="container">
+                    <p>&copy; 2026 ACL Metalúrgica. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script/script.js"></script>
+    </body>
+
+</html>
