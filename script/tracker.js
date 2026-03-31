@@ -5,7 +5,7 @@
     // ==========================================
     const CONFIG = {
         // ATENÇÃO: Coloque a URL completa apontando para a Tabela do cliente
-        url: "https://thduwjmzzqexvethhogf.supabase.co/cli_01_Alexandre_ACl",
+        url: "https://thduwjmzzqexvethhogf.supabase.co/cli_01_alexandre_acl",
         key: "sb_publishable_t3xQ6XifTSE7FmjKa5EWug_wKolazNF",
         timeout: 800 // Escudo de UX (800ms) - Não alterar
     };
